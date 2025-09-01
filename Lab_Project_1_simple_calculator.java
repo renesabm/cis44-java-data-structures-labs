@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author panka
  */
 public class Lab_Project_1_simple_calculator {
-    public static boolean containsLetter(String input) {
+    private static boolean containsLetter(String input) {
         for (char c : input.toCharArray()) {
             if (Character.isLetter(c)) {
                 return true;
@@ -83,4 +83,5 @@ public class Lab_Project_1_simple_calculator {
         }
 
     }
+
 }
