@@ -29,12 +29,13 @@ public class AVLTreeDriver {
         System.out.print("Inorder: "); // Expected: 4 5 8 10 20 25 30 
         tree.inorder();
 
-        System.out.print("Preorder: "); // Expected: 20 5 4 10 8 30 25
+        System.out.print("Preorder: "); // Expected: 10 5 4 8 25 20 30
         tree.preorder();
 
-        System.out.print("Postorder: "); // Expected: 4 8 10 5 25 30 20
+        System.out.print("Postorder: "); // Expected: 4 8 5 20 30 25 10 
         tree.postorder();
 
         // TODO: Add expected results as comments for verification
     }
+
 }
