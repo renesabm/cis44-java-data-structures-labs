@@ -1,1 +1,5 @@
+Choice:
+The Smart Scheduler organizes incoming tasks in the order they should be completed based on their priority level. The priority level is on a scale of 1-10 with 10 being the highest priority. By using a Max-Heap, the task with the maximum priority is executed first. The task is bubbled up using upheap until the parent key is larger or equal to it's key. This guarantees that the highest priority item makes it's way up to the root. Then, when it is extracted, downheap ensures that the last element goes to the root and is compared with the children until a swap occurs. This is repeated until the heap is organized after each insertion or extraction.
 
+Big-O Expectations:
+Inserting each item into the array list has auxillary time complexity of O(1). Then, upheap is performed to restore the heap property and has time complexity O(log n). Next, the extraction of the root(highest priority item) occurs. After the extraction, the root is replaced with the last element and downheap is performed to restore the heap property. This has time complexity O(log n). Thus, the total sorting time is O(n log n) as these operations are performed for each element.
