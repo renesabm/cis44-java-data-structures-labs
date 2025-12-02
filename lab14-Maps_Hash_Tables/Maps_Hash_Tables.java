@@ -70,15 +70,20 @@ class Maps_Hash_Tables<K, V> implements MapADT<K, V> {
     // TODO: Complete this method (O(n))
     public V put(K key, V value) {
         // 1. Search for existing key.
-        int i = findEntryIndex(key); 
-        
+        int entry = findEntryIndex(key); 
+    
         // 2. If found, update the value and return the old value.
-        if (i != -1) {
-            return list.get(i).setValue(value);
+        if (entry != -1) {
+            return list.get(entry).setValue(value);
         }
         
         // 3. If not found, add a new entry and return null.
-        list.add(new Entry<>(key, value));
-        return null;
+        else {
+            list.add(new Entry<>(key, value));
+            return null;
+        }
+        
     }
 }
+
+
