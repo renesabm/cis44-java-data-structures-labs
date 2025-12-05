@@ -1,0 +1,45 @@
+package com.mycompany.capstone;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author panka
+ */
+
+import java.util.ArrayList;
+public class MaxHeap {
+    private ArrayList<Task> heap;
+    
+    public MaxHeap() {
+        this.heap = new ArrayList<>();
+    }
+    
+    public void insert(Task task) {
+        // TODO- inserts a new task into the heap
+    }
+    
+    public Task extractMax() {
+        return null; //placeholder
+        // returns mask prioirty task
+        
+    }   
+    
+    public void upheap(int index) {
+        // TODO- restores heap property afrer element inserted
+    }
+    
+    public void downheap(int index) {
+        // TODO- restores heap property after element removed
+    }
+    
+    public void swap(int i, int j) {
+        Task temp = heap.get(i);
+        heap.set(i, heap.get(j));
+        heap.set(j, temp);
+    }
+    
+}
