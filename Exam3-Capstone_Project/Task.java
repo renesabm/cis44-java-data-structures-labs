@@ -38,4 +38,8 @@ public class Task implements Comparable<Task> {
     public int getPriority() {
         return priority;
     }
+    
+    public String toString() {
+        return "Task[priority=" + priority + ", description=" + description + "]";
+    }
 }
