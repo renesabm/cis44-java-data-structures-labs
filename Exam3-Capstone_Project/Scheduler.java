@@ -23,12 +23,25 @@ public class Scheduler {
     }
     
     public Task getTask() {
-       return null; //placeholder
+       return heap.extractMax(); //placeholder
        // TODO- returns highest priority task
     }
     
     public List<Task> getTaskOrder() {
-        return new ArrayList<>();
+        List<Task> order = new ArrayList<>();
+        List<Task> temp = new ArrayList<>();
+
+        Task t;
+        while ((t = heap.extractMax()) != null) {
+            order.add(t);
+            temp.add(t); 
+        }
+
+        for (Task task : temp) {
+            heap.insert(task);
+        }
+
+        return order;
         // returns the array in order of tasks being completed
     }
 }
